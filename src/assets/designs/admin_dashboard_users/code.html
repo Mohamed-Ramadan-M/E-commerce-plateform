@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zahy Admin - User Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f6f3f2",
+                    "surface-container-high": "#eae7e7",
+                    "secondary-fixed-dim": "#ffb693",
+                    "on-primary-fixed": "#001356",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#124af0",
+                    "primary": "#0040e0",
+                    "surface-dim": "#dcd9d9",
+                    "on-secondary-container": "#572000",
+                    "primary-fixed-dim": "#b8c3ff",
+                    "secondary": "#a04100",
+                    "on-background": "#1c1b1b",
+                    "inverse-surface": "#313030",
+                    "on-error": "#ffffff",
+                    "background": "#fcf9f8",
+                    "primary-fixed": "#dde1ff",
+                    "surface-container": "#f0eded",
+                    "outline": "#747688",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-secondary-fixed": "#351000",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c4c5d9",
+                    "on-primary-container": "#efefff",
+                    "surface": "#fcf9f8",
+                    "on-surface": "#1c1b1b",
+                    "on-tertiary-fixed-variant": "#6900b3",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e5e2e1",
+                    "primary-container": "#2e5bff",
+                    "on-surface-variant": "#434656",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#7a1bc8",
+                    "inverse-primary": "#b8c3ff",
+                    "tertiary-fixed": "#f0dbff",
+                    "secondary-fixed": "#ffdbcc",
+                    "on-tertiary-fixed": "#2c0051",
+                    "on-primary-fixed-variant": "#0035be",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fcf9f8",
+                    "tertiary-container": "#943fe2",
+                    "secondary-container": "#fe6b00",
+                    "tertiary-fixed-dim": "#ddb7ff",
+                    "on-tertiary-container": "#faecff",
+                    "on-secondary-fixed-variant": "#7a3000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "gutter": "20px",
+                    "base": "8px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "lg": "48px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": [
+                            "Bricolage Grotesque"
+                    ],
+                    "headline-lg": [
+                            "Bricolage Grotesque"
+                    ],
+                    "body-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-md": [
+                            "Bricolage Grotesque"
+                    ],
+                    "body-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label-sm": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-xl": [
+                            "Bricolage Grotesque"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-xl": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md min-h-screen flex antialiased">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col bg-surface-container-low dark:bg-inverse-surface h-full w-64 rounded-r-xl shadow-lg dark:shadow-none shadow-primary/5 fixed left-0 top-0 bottom-0 py-md z-40 bg-surface-container-high dark:bg-surface-container">
+<!-- Header -->
+<div class="px-6 pb-6 border-b border-outline-variant/30 flex items-center gap-4">
+<img alt="Zahy admin logo" class="w-12 h-12 rounded-full object-cover shadow-sm bg-primary/10" data-alt="A striking minimalist logo design for a trendy streetwear brand named Zahy, featuring bold typography. The logo is set against a clean white background, emphasizing high contrast and modern aesthetics. Electric blue accents give the design an extroverted, energetic vibe. The overall mood is youthful and confident, reflecting the brand's identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh9cW2rLa65DKItJlA38OVDPzviJsDBS-SeQedReO0DkcmAnxOV1ys0OZePToWDk5nL2bX3QnvVLNagghCASIsEtCfpXy5-pNksp9vPOSFkBf7dCxDG3mUknsW8mjmdm20bGj9Bzn7L73TuDvaFIWwHnnoNDfF48tKpA7UbB4EdxVbIE5KUly20BTwzTbnHUcZXYQEWMcyrj7FGt4RYLBWV12EW3yLTPgVbBXe3PPviZwarG_-7N6NvFLmfH_66RtfprVyWM0CWw"/>
+<div>
+<h1 class="font-headline-md text-headline-md text-primary font-black">Zahy Admin</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Dashboard v1.0</p>
+</div>
+</div>
+<!-- Main Links -->
+<div class="flex-1 mt-6 overflow-y-auto">
+<a class="text-on-surface-variant hover:bg-surface-container-highest rounded-xl mx-4 my-1 px-4 py-3 flex items-center gap-3 transition-all hover:scale-[1.02] hover:bg-surface-variant dark:hover:bg-surface-container-high" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Overview</span>
+</a>
+<a class="bg-primary text-on-primary rounded-xl shadow-md scale-105 mx-4 my-2 px-4 py-3 flex items-center gap-3 scale-98 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="group" data-weight="fill" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-label-md text-label-md">Users</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-highest rounded-xl mx-4 my-1 px-4 py-3 flex items-center gap-3 transition-all hover:scale-[1.02] hover:bg-surface-variant dark:hover:bg-surface-container-high" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-label-md text-label-md">Inventory</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-highest rounded-xl mx-4 my-1 px-4 py-3 flex items-center gap-3 transition-all hover:scale-[1.02] hover:bg-surface-variant dark:hover:bg-surface-container-high" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Sales</span>
+</a>
+</div>
+<!-- Footer Links -->
+<div class="mt-auto border-t border-outline-variant/30 pt-4">
+<a class="text-on-surface-variant hover:bg-surface-container-highest rounded-xl mx-4 my-1 px-4 py-3 flex items-center gap-3 transition-all hover:scale-[1.02] hover:bg-surface-variant dark:hover:bg-surface-container-high" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-highest rounded-xl mx-4 my-1 px-4 py-3 flex items-center gap-3 transition-all hover:scale-[1.02] hover:bg-surface-variant dark:hover:bg-surface-container-high" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 p-margin-mobile md:p-margin-desktop min-h-screen">
+<!-- Header Section -->
+<header class="flex justify-between items-end mb-xl">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-primary font-black tracking-tighter">User Management</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Manage and monitor all platform users.</p>
+</div>
+<div class="flex gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-12 pr-4 py-3 rounded-DEFAULT bg-surface-container-high border-none focus:ring-2 focus:ring-primary shadow-inner text-on-background placeholder-outline-variant w-64 font-body-md" placeholder="Search users..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-DEFAULT shadow-[0_10px_20px_-10px_rgba(0,64,224,0.4)] hover:scale-105 transition-transform duration-200 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+                    Add User
+                </button>
+</div>
+</header>
+<!-- Stats Grid (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-xl">
+<!-- Stat Card 1 -->
+<div class="bg-surface rounded-xl p-6 shadow-[0_10px_30px_-15px_rgba(0,64,224,0.1)] relative overflow-hidden group">
+<div class="absolute -right-6 -top-6 w-32 h-32 bg-primary/5 rounded-full transition-transform group-hover:scale-150 duration-500"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Users</p>
+<h3 class="font-headline-lg text-headline-lg text-on-background mt-2">12,450</h3>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="groups">groups</span>
+</div>
+</div>
+<div class="flex items-center gap-2 relative z-10">
+<span class="bg-secondary-container text-on-primary font-label-sm text-label-sm px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+                        +12%
+                    </span>
+<span class="font-body-md text-body-md text-outline">vs last month</span>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface rounded-xl p-6 shadow-[0_10px_30px_-15px_rgba(0,64,224,0.1)] relative overflow-hidden group">
+<div class="absolute -right-6 -top-6 w-32 h-32 bg-tertiary/5 rounded-full transition-transform group-hover:scale-150 duration-500"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">New This Week</p>
+<h3 class="font-headline-lg text-headline-lg text-on-background mt-2">842</h3>
+</div>
+<div class="w-12 h-12 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="person_add">person_add</span>
+</div>
+</div>
+<div class="flex items-center gap-2 relative z-10">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+                        +5%
+                    </span>
+<span class="font-body-md text-body-md text-outline">vs last week</span>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface rounded-xl p-6 shadow-[0_10px_30px_-15px_rgba(0,64,224,0.1)] relative overflow-hidden group">
+<div class="absolute -right-6 -top-6 w-32 h-32 bg-secondary/5 rounded-full transition-transform group-hover:scale-150 duration-500"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Sellers</p>
+<h3 class="font-headline-lg text-headline-lg text-on-background mt-2">1,204</h3>
+</div>
+<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="storefront">storefront</span>
+</div>
+</div>
+<div class="flex items-center gap-2 relative z-10">
+<span class="bg-outline-variant text-on-surface font-label-sm text-label-sm px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_flat">trending_flat</span>
+                        0%
+                    </span>
+<span class="font-body-md text-body-md text-outline">vs last month</span>
+</div>
+</div>
+</section>
+<!-- User Table Section -->
+<section class="bg-surface rounded-xl shadow-[0_10px_30px_-15px_rgba(0,64,224,0.1)] overflow-hidden">
+<!-- Table Controls -->
+<div class="p-6 border-b border-outline-variant/30 flex justify-between items-center bg-surface-bright">
+<div class="flex gap-4">
+<button class="font-label-md text-label-md text-primary bg-primary/10 px-4 py-2 rounded-full hover:bg-primary/20 transition-colors">All Users</button>
+<button class="font-label-md text-label-md text-on-surface-variant px-4 py-2 rounded-full hover:bg-surface-container-high transition-colors">Admins</button>
+<button class="font-label-md text-label-md text-on-surface-variant px-4 py-2 rounded-full hover:bg-surface-container-high transition-colors">Sellers</button>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 font-label-md text-label-md">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                    Filter
+                </button>
+</div>
+<!-- Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest border-b border-outline-variant/30">
+<th class="p-4 font-label-sm text-label-sm text-outline uppercase tracking-wider pl-6">User</th>
+<th class="p-4 font-label-sm text-label-sm text-outline uppercase tracking-wider">Role</th>
+<th class="p-4 font-label-sm text-label-sm text-outline uppercase tracking-wider">Status</th>
+<th class="p-4 font-label-sm text-label-sm text-outline uppercase tracking-wider">Joined</th>
+<th class="p-4 font-label-sm text-label-sm text-outline uppercase tracking-wider text-right pr-6">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="p-4 pl-6 flex items-center gap-4">
+<img alt="Avatar" class="w-10 h-10 rounded-full object-cover border-2 border-surface shadow-sm" data-alt="A close-up portrait of a trendy young woman with a confident expression, wearing bright streetwear fashion. She has colorful makeup and styled hair. The lighting is high-key and bright, typical of a modern light-mode interface. The background is a soft, solid pastel blue to complement an electric blue primary color palette. The mood is energetic and extroverted." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWi7tR3WBv_UvbFj1w8P-bO-MkT-VNbkUj3M327LF034Ol_zyy3RQ2p3YteHd8eNsLn0GNpfCrwqfSMbp8pPOgbZxpZ419WYM9PXTMemWJwQT_SVx3ahxvn_0I4gT1Gqxg5apVpogSthb1yaZhnW8NIEvs2rvoiJHz55qU0C-t1bYoZxtKvwsXc7p-BysKGbjtjU2qh9m4MWoCkkgl83xTJzAfuAg5nlj67VAvg3DMGbefOVvWtSv_KUJdg-8MNYZJMD3xD1G_3w"/>
+<div>
+<p class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors">Alex Rivera</p>
+<p class="font-body-md text-body-md text-outline-variant text-[13px]">alex@zahy.com</p>
+</div>
+</td>
+<td class="p-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-3 py-1 rounded-full">Admin</span>
+</td>
+<td class="p-4">
+<span class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Active
+                                </span>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface-variant">Oct 12, 2023</td>
+<td class="p-4 pr-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-secondary-container hover:bg-secondary-container/10 transition-colors" title="Suspend">
+<span class="material-symbols-outlined text-[18px]" data-icon="block">block</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-error hover:bg-error/10 transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="p-4 pl-6 flex items-center gap-4">
+<img alt="Avatar" class="w-10 h-10 rounded-full object-cover border-2 border-surface shadow-sm" data-alt="A portrait of a young man with a slight smile, wearing a casual orange hoodie. He has a relaxed, approachable demeanor. The lighting is soft and even, highlighting his features against a clean, minimal white background. The image fits perfectly in a modern, high-contrast light-mode UI. The mood is friendly and trendy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7uzqy3gWFUPLchR4LXBmnX5vjBldGNeivpbGW7hi0S-wyhO4PRNDxQL1mJL0cQ_0BEdECcWJlbSblKn7BvrV2EjD5GMjPadRhI2dlEvRsu4q4GU7E9MqZzpPNF6XTrwxBQ3qQAxTZJuBc3IP0CWVb4JdCBct92PTdGVY_-AwWHpJ3JJ4NsXj4-4_3V8ecT0Xh_I1TEvDc1BV5Wb2SR7bF8O2yGk0P1p2h4XMAUUsog1kOgCRI0OsLocSkA3Z_DuMCmsI_6ncWgg"/>
+<div>
+<p class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors">Jordan Lee</p>
+<p class="font-body-md text-body-md text-outline-variant text-[13px]">jordan.l@hype.net</p>
+</div>
+</td>
+<td class="p-4">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-3 py-1 rounded-full">Seller</span>
+</td>
+<td class="p-4">
+<span class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Active
+                                </span>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface-variant">Nov 05, 2023</td>
+<td class="p-4 pr-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-secondary-container hover:bg-secondary-container/10 transition-colors" title="Suspend">
+<span class="material-symbols-outlined text-[18px]" data-icon="block">block</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-error hover:bg-error/10 transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-lowest transition-colors group bg-error/5">
+<td class="p-4 pl-6 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-outline font-headline-md text-headline-md border-2 border-surface shadow-sm">
+                                    S
+                                </div>
+<div>
+<p class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors">Sam Taylor</p>
+<p class="font-body-md text-body-md text-outline-variant text-[13px]">sam.t@email.com</p>
+</div>
+</td>
+<td class="p-4">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded-full">Customer</span>
+</td>
+<td class="p-4">
+<span class="flex items-center gap-2 font-label-sm text-label-sm text-error">
+<span class="w-2 h-2 rounded-full bg-error"></span> Suspended
+                                </span>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface-variant">Jan 22, 2024</td>
+<td class="p-4 pr-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-colors" title="Restore">
+<span class="material-symbols-outlined text-[18px]" data-icon="settings_backup_restore">settings_backup_restore</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-error hover:bg-error/10 transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="p-4 pl-6 flex items-center gap-4">
+<img alt="Avatar" class="w-10 h-10 rounded-full object-cover border-2 border-surface shadow-sm" data-alt="A portrait of a stylish young woman wearing a trendy hat and oversized sunglasses. She is set against a very light, desaturated pastel background that emphasizes her streetwear fashion. The lighting is crisp and modern, perfect for a high-contrast, playful light-mode application. The mood is chic and extroverted." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6JSiRtqDt92F-J5EaC35fFjPdI_fr7pETSPatifX7qo6JV7NnbkCUvsrFMvvgaV-rPcfmETXPrka9ivYQ7RBmAUizbVw-1uZjwP1G1XLcz0voQKP_5_SNUomJ5ACfqLtYq3tdyyacKuQ-CojhhrofCv2wGKKm17psz4eT6fqhzraDWPo6O-80frXBedR-wIzDndbSt9DPfK3wSQdLqlIwwR-QTQJ3rG15ZMMFyBt4lNJ4Bl08BmxWf1X1TsMsbdLX4xAGmmcnKQ"/>
+<div>
+<p class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors">Mia Wong</p>
+<p class="font-body-md text-body-md text-outline-variant text-[13px]">mia.w@design.co</p>
+</div>
+</td>
+<td class="p-4">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded-full">Customer</span>
+</td>
+<td class="p-4">
+<span class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Active
+                                </span>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface-variant">Feb 14, 2024</td>
+<td class="p-4 pr-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-secondary-container hover:bg-secondary-container/10 transition-colors" title="Suspend">
+<span class="material-symbols-outlined text-[18px]" data-icon="block">block</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-error hover:bg-error/10 transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-4 border-t border-outline-variant/30 flex justify-between items-center bg-surface-bright">
+<p class="font-body-md text-body-md text-outline">Showing 1 to 4 of 12,450 users</p>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md shadow-md">1</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors font-label-md text-label-md">2</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors font-label-md text-label-md">3</button>
+<span class="w-10 h-10 flex items-center justify-center text-outline">...</span>
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+</body></html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zahy - Product Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;700&amp;family=Climate+Crisis:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-error-container": "#ffdad6", "surface-container": "#1e2113", "on-primary-fixed": "#161e00", "surface-dim": "#111508", "on-surface": "#e2e4cf", primary: "#ffffff", "inverse-on-surface": "#2f3223", "primary-container": "#c3f400", "surface-tint": "#abd600", "inverse-surface": "#e2e4cf", "on-error": "#690005", "primary-fixed-dim": "#abd600", "on-secondary-fixed": "#380038", "surface-bright": "#373b2c", "on-tertiary": "#411d66", "on-surface-variant": "#c4c9ac", "secondary-fixed": "#ffd7f5", "on-primary-container": "#556d00", "tertiary-fixed-dim": "#dcb8ff", "inverse-primary": "#506600", "on-background": "#e2e4cf", "error-container": "#93000a", "on-primary": "#283500", "secondary-container": "#fe00fe", "surface-container-low": "#1a1d10", "on-secondary": "#5b005b", secondary: "#ffabf3", "tertiary-fixed": "#efdbff", "primary-fixed": "#c3f400", outline: "#8e9379", "on-tertiary-fixed-variant": "#59367e", "on-primary-fixed-variant": "#3c4d00", "on-secondary-container": "#500050", "tertiary-container": "#efdbff", "on-tertiary-fixed": "#2b0150", background: "#111508", "on-tertiary-container": "#78549f", "on-secondary-fixed-variant": "#810081", tertiary: "#ffffff", "secondary-fixed-dim": "#ffabf3", error: "#ffb4ab", "outline-variant": "#444933", "surface-container-high": "#282b1d", "surface-container-lowest": "#0c0f04", "surface-variant": "#333627", "surface-container-highest": "#333627", surface: "#111508"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, spacing: {"stack-lg": "80px", unit: "8px", gutter: "24px", "margin-desktop": "64px", "stack-md": "32px", "margin-mobile": "20px", "container-max": "1440px", "stack-sm": "12px"}, fontFamily: {"display-xl": ["DynaPuff"], "body-md": ["Climate Crisis"], "headline-lg": ["DynaPuff"], "body-lg": ["Climate Crisis"], "label-bold": ["DynaPuff"], "headline-lg-mobile": ["DynaPuff"], "headline-md": ["DynaPuff"]}, fontSize: {"display-xl": ["120px", {lineHeight: "110%", letterSpacing: "-0.04em", fontWeight: "700"}], "body-md": ["16px", {lineHeight: "150%", fontWeight: "400"}], "headline-lg": ["72px", {lineHeight: "100%", letterSpacing: "-0.02em", fontWeight: "700"}], "body-lg": ["20px", {lineHeight: "150%", fontWeight: "400"}], "label-bold": ["14px", {lineHeight: "120%", fontWeight: "700"}], "headline-lg-mobile": ["48px", {lineHeight: "100%", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-md": ["40px", {lineHeight: "110%", fontWeight: "600"}]}}}};</script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+    </style>
+</head>
+<body class="antialiased pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface/80 backdrop-blur-xl shadow-lg shadow-primary/10 fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-7xl mx-auto">
+<a class="font-headline-lg text-headline-lg font-extrabold tracking-tighter text-primary-fixed" href="#">Zahy</a>
+<div class="flex items-center gap-md">
+<button class="text-primary-fixed hover:scale-105 transition-transform duration-200 active:scale-95">
+<span class="material-symbols-outlined font-headline-md text-headline-md">shopping_bag</span>
+</button>
+<button class="text-primary-fixed hover:scale-105 transition-transform duration-200 active:scale-95">
+<span class="material-symbols-outlined font-headline-md text-headline-md">favorite</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-[100px] max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pb-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Product Images Gallery -->
+<div class="md:col-span-7 flex flex-col gap-stack-sm">
+<div class="bg-surface-container-low rounded-xl overflow-hidden aspect-[3/4] relative">
+<img alt="Main product image" class="w-full h-full object-cover" data-alt="A trendy young male model wearing an oversized, vibrant electric blue hoodie and distressed black denim. The lighting is high-contrast studio lighting, creating sharp, dynamic shadows. The background is a clean, bright white studio setting. The overall mood is energetic, confident, and fashion-forward, aligning with a premium streetwear aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABV4ELzoKDOzq0Vjb4tHVsNlta_Inhwx7I3h6Xi6-653bS75CfB61wi9wV5D9cNHj7aIqcepz6N0pHjCnlyTATXQW_Oalm4_ANrnvMsI__V-vPxLVZtwIzFacfwTk5XOfvcqosnh99AmOnhlEFFGUad7XpUSLRd8L56zUzFJCk4xeAfSWNbrgaTUX_vfhNVb2EZhSmPVViM3OL8QUVXut_pabWqgcaEkzvFQc8FFlioff15yy0qJNiLWqeo6KiHpP9s2LAL4PKlQ"/>
+</div>
+<div class="grid grid-cols-3 gap-stack-sm">
+<div class="bg-surface-container-low rounded-lg overflow-hidden aspect-square cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Product detail 1" class="w-full h-full object-cover" data-alt="A close-up macro shot of the electric blue hoodie's fabric texture, highlighting the premium heavy-weight cotton blend and detailed stitching. The lighting is crisp and even, emphasizing the fabric's quality and the vibrant dye. The mood is tactile and focus-driven." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSXbyNC4W08ORlNB-mkfhYt9u92piv2c4DaWRVapDOC8WVg5HomxwqtkvC2WOMHW56ZGe2aDdw-15JVBXln4FBiuXMvi9lJHEPKp1MbwRqRedObjUpMmK68TIqj9zipkruh896aZLTCmu3YpUVj1ScjTA-nLtIJ-_GydhVRyZ94PrdsZJD_C64evAcj2puGstTm2QHGwCW3YvSvJUdi-H2weCDxgOWa6WSKlabHQ-jA8_Ebivt9L1AeauqcK-93UiQKs4FQ2_DTA"/>
+</div>
+<div class="bg-surface-container-low rounded-lg overflow-hidden aspect-square cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Product detail 2" class="w-full h-full object-cover" data-alt="A lifestyle shot of the young male model wearing the electric blue hoodie, captured outdoors against a sleek, modern concrete architectural backdrop. The sunlight is bright and clear, casting distinct shadows. The vibe is urban, dynamic, and youthful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDObesTQ99W_GKsWqC31kopd9AOx00OcP59D1ac44S4bkeb0VReicq7B_sisyGCOPsNm1-g14ow99XopofNb9wOL-N_WALECS5hMhAX830FwuwM--iu8LZRPq5lBejiez_mnxLYWSkCb2xbBFbOOplVQ7VXvAfvWHYmNo7BsfRgD1Qg75m3y3BhTKiAkgWh5VLpRDVsmFfOJsAAeFdnaSwnub_VpJlHZhTeQF5fW0oVHmLEoC9PEByxMDA-9nu2-FwIl6wM6VliTQ"/>
+</div>
+<div class="bg-surface-container-low rounded-lg overflow-hidden aspect-square cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Product detail 3" class="w-full h-full object-cover" data-alt="A focused shot on the back of the hoodie, revealing a subtle, tonal embroidered graphic or brand logo near the hem. The lighting highlights the garment's drape and shape. The setting is minimal, ensuring the design detail is the primary focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA72fGH-_KeYZ9WMom2lKyT2lFgeObQCaRWHQntjAahNvgbWX9479_OHp-darHdHTJpHhwcWRUW7zZjgiE5ekAfSQYc8axunNEtqsh69DMrXEGwufjTIuu0dXDVtm-WlvIWmqJAi5fwMpkxDfEFxHtiUCg5XgZyM6OArXePfWRjxFnDmEMWlUL92r1S5Sb_BmuigksuW3C13DO125LU0ke2gd5DDaBT3-hkhgjaxwGM0stSKU5vnprQ4n1SpRhJfNbu7NaamoWTpQ"/>
+</div>
+</div>
+</div>
+<!-- Product Details & Actions -->
+<div class="md:col-span-5 flex flex-col gap-stack-md sticky top-[120px] h-fit pt-stack-md md:pt-0">
+<div class="flex flex-col gap-unit">
+<div class="flex justify-between items-start">
+<h1 class="font-display-xl text-display-xl text-on-background">Electric Horizon Hoodie</h1>
+<p class="font-headline-lg text-headline-lg text-primary-container">$120</p>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">The ultimate oversized comfort meets street-ready style. It's giving main character energy.</p>
+</div>
+<!-- Size Selection -->
+<div class="flex flex-col gap-stack-sm">
+<div class="flex justify-between items-center">
+<h2 class="font-label-bold text-label-bold text-on-background">Select Size</h2>
+<a class="font-label-bold text-label-bold text-primary-container hover:underline" href="#">Size Guide</a>
+</div>
+<div class="flex flex-wrap gap-stack-sm">
+<button class="bg-surface-container-lowest border-2 border-outline-variant text-on-surface-variant font-label-bold text-label-bold rounded-full px-6 py-3 hover:border-primary-container hover:text-primary-container transition-colors focus:border-primary-container focus:bg-tertiary-fixed focus:text-tertiary-container focus:outline-none">S</button>
+<button class="bg-tertiary-fixed border-2 border-tertiary-container text-tertiary-container font-label-bold text-label-bold rounded-full px-6 py-3 transition-colors focus:outline-none">M</button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant text-on-surface-variant font-label-bold text-label-bold rounded-full px-6 py-3 hover:border-primary-container hover:text-primary-container transition-colors focus:border-primary-container focus:bg-tertiary-fixed focus:text-tertiary-container focus:outline-none">L</button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant text-on-surface-variant font-label-bold text-label-bold rounded-full px-6 py-3 hover:border-primary-container hover:text-primary-container transition-colors focus:border-primary-container focus:bg-tertiary-fixed focus:text-tertiary-container focus:outline-none">XL</button>
+</div>
+</div>
+<!-- Add to Cart -->
+<div class="flex flex-col gap-stack-sm">
+<button class="bg-primary-container text-on-primary-container font-headline-md text-headline-md py-6 rounded-full shadow-[inset_0_-8px_0_rgba(0,0,0,0.1),0_15px_30px_rgba(195,244,0,0.3)] border-4 border-surface-tint hover:scale-[1.02] active:scale-95 active:shadow-[inset_0_-2px_0_rgba(0,0,0,0.1)] transition-all duration-200 flex items-center justify-center gap-4">
+<span class="material-symbols-outlined text-headline-md">shopping_cart</span>
+                        Add to Cart
+                    </button>
+<p class="font-label-bold text-label-bold text-center text-on-surface-variant">Free shipping on orders over $150</p>
+</div>
+<!-- Playful Description -->
+<div class="bg-gradient-to-br from-secondary-container/20 via-surface-container-highest to-primary-container/20 rounded-xl p-stack-md mt-stack-md border-2 border-outline-variant/30">
+<h3 class="font-headline-md text-headline-md text-on-background mb-stack-sm">Why you need this:</h3>
+<ul class="flex flex-col gap-stack-sm font-body-lg text-body-lg text-on-surface">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+<span>Like wearing a cloud, but tougher.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+<span>Bold color guarantees you won't blend in.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+<span>Perfect for late-night food runs or looking busy at the cafe.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-surface/80 backdrop-blur-xl shadow-[0_-4px_20px_0_rgba(195,244,0,0.1)] fixed bottom-0 w-full z-50 rounded-t-xl pb-safe">
+<div class="flex justify-around items-center p-2 w-full">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors active:scale-90 duration-150 p-2 rounded-xl" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-label-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 hover:bg-surface-container-high transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">reorder</span>
+<span class="font-label-bold text-label-bold">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors active:scale-90 duration-150 p-2 rounded-xl" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-label-bold text-label-bold">Bag</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors active:scale-90 duration-150 p-2 rounded-xl" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-bold text-label-bold">Profile</span>
+</a>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full mt-stack-lg border-t border-outline-variant hidden md:block">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-md w-full max-w-7xl mx-auto">
+<div class="font-headline-lg text-headline-lg text-primary-container mb-stack-sm md:mb-0">Zahy</div>
+<div class="flex gap-gutter font-body-md text-body-md text-on-surface-variant">
+<a class="hover:text-primary-container transition-colors cursor-pointer" href="#">Terms</a>
+<a class="hover:text-primary-container transition-colors cursor-pointer" href="#">Privacy</a>
+<a class="hover:text-primary-container transition-colors cursor-pointer" href="#">Help</a>
+<a class="hover:text-primary-container transition-colors cursor-pointer" href="#">Shipping</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant mt-stack-sm md:mt-0">© 2024 Zahy. All rights reserved.</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cart - Zahy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;700&amp;family=Climate+Crisis:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-error-container": "#ffdad6", "surface-container": "#1e2113", "on-primary-fixed": "#161e00", "surface-dim": "#111508", "on-surface": "#e2e4cf", primary: "#ffffff", "inverse-on-surface": "#2f3223", "primary-container": "#c3f400", "surface-tint": "#abd600", "inverse-surface": "#e2e4cf", "on-error": "#690005", "primary-fixed-dim": "#abd600", "on-secondary-fixed": "#380038", "surface-bright": "#373b2c", "on-tertiary": "#411d66", "on-surface-variant": "#c4c9ac", "secondary-fixed": "#ffd7f5", "on-primary-container": "#556d00", "tertiary-fixed-dim": "#dcb8ff", "inverse-primary": "#506600", "on-background": "#e2e4cf", "error-container": "#93000a", "on-primary": "#283500", "secondary-container": "#fe00fe", "surface-container-low": "#1a1d10", "on-secondary": "#5b005b", secondary: "#ffabf3", "tertiary-fixed": "#efdbff", "primary-fixed": "#c3f400", outline: "#8e9379", "on-tertiary-fixed-variant": "#59367e", "on-primary-fixed-variant": "#3c4d00", "on-secondary-container": "#500050", "tertiary-container": "#efdbff", "on-tertiary-fixed": "#2b0150", background: "#111508", "on-tertiary-container": "#78549f", "on-secondary-fixed-variant": "#810081", tertiary: "#ffffff", "secondary-fixed-dim": "#ffabf3", error: "#ffb4ab", "outline-variant": "#444933", "surface-container-high": "#282b1d", "surface-container-lowest": "#0c0f04", "surface-variant": "#333627", "surface-container-highest": "#333627", surface: "#111508"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, spacing: {"stack-lg": "80px", unit: "8px", gutter: "24px", "margin-desktop": "64px", "stack-md": "32px", "margin-mobile": "20px", "container-max": "1440px", "stack-sm": "12px"}, fontFamily: {"display-xl": ["DynaPuff"], "body-md": ["Climate Crisis"], "headline-lg": ["DynaPuff"], "body-lg": ["Climate Crisis"], "label-bold": ["DynaPuff"], "headline-lg-mobile": ["DynaPuff"], "headline-md": ["DynaPuff"]}, fontSize: {"display-xl": ["120px", {lineHeight: "110%", letterSpacing: "-0.04em", fontWeight: "700"}], "body-md": ["16px", {lineHeight: "150%", fontWeight: "400"}], "headline-lg": ["72px", {lineHeight: "100%", letterSpacing: "-0.02em", fontWeight: "700"}], "body-lg": ["20px", {lineHeight: "150%", fontWeight: "400"}], "label-bold": ["14px", {lineHeight: "120%", fontWeight: "700"}], "headline-lg-mobile": ["48px", {lineHeight: "100%", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-md": ["40px", {lineHeight: "110%", fontWeight: "600"}]}}}};</script>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col pt-[88px] pb-[88px] md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl shadow-lg shadow-primary/10">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-7xl mx-auto">
+<div class="font-headline-lg text-headline-lg font-extrabold tracking-tighter text-primary-fixed dark:text-primary-fixed">
+                Zahy
+            </div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:scale-105 transition-transform duration-200 active:scale-95 transition-all" href="#">Home</a>
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:scale-105 transition-transform duration-200 active:scale-95 transition-all" href="#">Shop</a>
+<a class="text-primary-fixed font-bold font-label-bold text-label-bold hover:scale-105 transition-transform duration-200 active:scale-95 transition-all flex flex-col items-center" href="#">
+                    Bag
+                    <div class="w-2 h-2 bg-primary-fixed rounded-full mt-1"></div>
+</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-primary-fixed dark:text-primary-fixed hover:scale-105 transition-transform duration-200 active:scale-95 transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="text-primary-fixed dark:text-primary-fixed hover:scale-105 transition-transform duration-200 active:scale-95 transition-all hidden md:block">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="hidden md:block w-12 h-12 rounded-full bg-surface-variant overflow-hidden hover:scale-105 transition-transform duration-200">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="A close-up portrait of a young man with a slight smile, wearing a casual t-shirt. The lighting is soft and natural, creating a welcoming and approachable mood. The background is a clean, out-of-focus light gray to maintain a modern, minimalist aesthetic that fits a bright UI style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH4AJr_ZU30bqgOU0DvDanA7rXM-qRzpSJ6bHi_RNr95pvrDgsE4qBraJdNeIIY_AXmdw85EWSe2ZwAUjwiVn3CnBkP6ZQ49fhEFVQ2CUnFsHc_UuL-2KozxoAkAihE6ZM4iozLyqrOctVeLfFgLe4HJNwn2ydL5eYeyYwgwRi45EKHa5cKLjZcIEYfIrE_1qUt7Cl2tk2hwx3_jIEACfK_hb6kjZzQdwnqnVLHzve9ysz29ppFCpjLXZ4K3iN7teEW-IAncOShg"/>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<div class="mb-stack-lg">
+<h1 class="font-headline-xl md:text-display-xl text-headline-lg-mobile text-on-background mb-2">Your Bag</h1>
+<p class="font-body-md text-body-lg text-on-surface-variant">3 items ready for checkout.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Cart Items List (Left Column) -->
+<div class="lg:col-span-8 flex flex-col gap-stack-md">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-lg shadow-primary/5 p-6 flex gap-gutter items-center relative group">
+<div class="w-24 h-24 md:w-40 md:h-40 rounded-lg bg-surface-container-highest flex-shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover mix-blend-screen" data-alt="A stylish, brightly colored oversized streetwear t-shirt displayed flat against a clean, light-colored background. The shirt features bold graphic prints that convey youthful energy and extroverted style. High-contrast, bright lighting highlights the fabric texture, aligning perfectly with a modern, fashion-forward, glassmorphic UI design language." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB325qDlWOcV5DZ3xWlbsv68bQUnBnK0MHhBfRFFPj2r0xwHCHtkGUaiwPc4LcV4IhEzaT-agaqd1t4S-kzhz7L_01c9VWdZ8vEWqXw14wKng2_tFVGdqup1JnXNgdBXIVxaTxZ3ick344n15pRSRzruhjDIkndKN8DqDkHamvwt1qcknIUP1BjI4-uJiOxuk9guFTnxCONtN5JyUd2cVuKvOlRAQRG5zYNuqVzBdPsGzFf0jtGgF1T-MAQfBdyhmmE3See32ZADQ"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-2">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-headline-md text-on-background leading-tight">Neon Street Tee</h3>
+<button class="text-outline hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Electric Blue / Oversized</p>
+<span class="inline-block bg-surface-variant text-on-surface font-label-bold text-label-bold px-4 py-2 rounded-full">Size L</span>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex items-center gap-3 bg-surface-container rounded-full px-2 py-1">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="font-label-bold text-label-bold w-6 text-center">1</span>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<span class="font-headline-md text-headline-md text-secondary-container">$45.00</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-lg shadow-primary/5 p-6 flex gap-gutter items-center relative group">
+<div class="w-24 h-24 md:w-40 md:h-40 rounded-lg bg-surface-container-highest flex-shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover mix-blend-screen" data-alt="A trendy, brightly colored lightweight bomber jacket laid flat. The jacket has vibrant orange accents, appealing to a young, fashion-forward male demographic. The setting is highly illuminated with soft shadows, creating a pristine, high-contrast look suitable for a playful, modern e-commerce interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYHsQr7k6QfWp7iAQiZgHY3tF8MW1neYdNz3ClWleA-_eJ3SiPkbGMZht-OotqS_f5BOGaXpew_Z8CfWL8cM5ST2KxJ8kjTWVMRx65qcFtVsRk9ISXp4W6pH0GPxMpz4ZRH-j8F-KYbw-st8X4XgDSCathx6Omr9F3P-Byesv9NCHeeyYBI8YPVNSgYK-xRIaeZi9cAaPf0xmDJ19Eqv6_Hm34J8VsMU3FBw_n01SSZvUPMlWvP12Kn7qN9NbRRMoHEE2tV4u_Kg"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-2">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-headline-md text-on-background leading-tight">Aero Bomber Jacket</h3>
+<button class="text-outline hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Sunset Orange / Regular</p>
+<span class="inline-block bg-surface-variant text-on-surface font-label-bold text-label-bold px-4 py-2 rounded-full">Size M</span>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex items-center gap-3 bg-surface-container rounded-full px-2 py-1">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="font-label-bold text-label-bold w-6 text-center">1</span>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<span class="font-headline-md text-headline-md text-secondary-container">$120.00</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-lg shadow-primary/5 p-6 flex gap-gutter items-center relative group">
+<div class="w-24 h-24 md:w-40 md:h-40 rounded-lg bg-surface-container-highest flex-shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover mix-blend-screen" data-alt="A pair of modern, chunky streetwear sneakers in bright white with striking electric blue details. The shoes are styled against a minimalist, slightly frosted backdrop. The lighting is crisp and studio-quality, emphasizing the energetic and extroverted brand identity in a high-contrast environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-kBAmWlIbnDC4V03F90n_CgJd--bzVbF1oJr9DOQK1jeaD5CiW3bGCe1dkLWYZZfGu9GHoh-8VwNCznbWebzDrWv1tgxZZifWbBsU6iAEfv1sqXTLsFlewSmYM2P6jaxVuD4zFNZLZcsr4YEwRz0U8m4qMGSTl4lD5AVO24AaOIjiFxj7V6U9QuneXNvGkKnLkCilrfPUAaLaOlltqZMbarEvYRmSIfJ6-lSjsSxYV62S2VvxZy_11C3nvsNHVu0Ot7VldM_SZA"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-2">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-headline-md text-on-background leading-tight">Velocity Kicks</h3>
+<button class="text-outline hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Ice White / Chunky</p>
+<span class="inline-block bg-surface-variant text-on-surface font-label-bold text-label-bold px-4 py-2 rounded-full">Size 10</span>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex items-center gap-3 bg-surface-container rounded-full px-2 py-1">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="font-label-bold text-label-bold w-6 text-center">1</span>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<span class="font-headline-md text-headline-md text-secondary-container">$95.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Summary (Right Column) -->
+<div class="lg:col-span-4">
+<div class="bg-on-tertiary-fixed rounded-xl shadow-lg shadow-primary/5 p-8 md:p-10 sticky top-28">
+<h2 class="font-headline-lg text-headline-lg text-tertiary-fixed mb-8">Summary</h2>
+<div class="flex flex-col gap-6 mb-8 border-b border-on-tertiary-fixed-variant pb-8">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-lg text-tertiary-fixed-dim">Subtotal</span>
+<span class="font-label-bold text-label-bold text-secondary-container">$260.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-lg text-tertiary-fixed-dim">Estimated Shipping</span>
+<span class="font-label-bold text-label-bold text-tertiary-fixed">Free</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-lg text-tertiary-fixed-dim">Tax</span>
+<span class="font-label-bold text-label-bold text-secondary-container">$20.80</span>
+</div>
+</div>
+<div class="flex justify-between items-center mb-10">
+<span class="font-headline-md text-headline-md text-tertiary-fixed">Total</span>
+<span class="font-headline-xl md:text-display-xl text-headline-lg text-secondary-container tracking-tight">$280.80</span>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container hover:bg-primary-fixed hover:text-on-primary-fixed font-headline-md text-headline-md py-6 rounded-full shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all duration-200 flex justify-center items-center gap-4">
+                        Checkout
+                        <span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</button>
+<div class="mt-6 flex items-center justify-center gap-2 text-tertiary-fixed-dim font-label-bold text-label-bold">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+                        Secure Checkout
+                    </div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center p-4 pb-safe bg-surface/80 dark:bg-surface-container-highest/80 backdrop-blur-xl shadow-[0_-4px_20px_0_rgba(0,64,224,0.1)] rounded-t-xl z-50">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors active:scale-90 duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[28px]">home</span>
+<span class="font-label-bold text-[12px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors active:scale-90 duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[28px]">reorder</span>
+<span class="font-label-bold text-[12px] mt-1">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-6 py-2 hover:bg-surface-container-high transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+<span class="font-label-bold text-[12px] mt-1">Bag</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors active:scale-90 duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[28px]">person</span>
+<span class="font-label-bold text-[12px] mt-1">Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full mt-stack-lg bg-surface-container-lowest dark:bg-surface-container-highest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-lg w-full max-w-7xl mx-auto gap-stack-md">
+<div class="font-headline-lg text-headline-lg text-primary-fixed">
+                Zahy
+            </div>
+<div class="flex gap-gutter">
+<a class="font-body-md text-body-lg text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Terms</a>
+<a class="font-body-md text-body-lg text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Privacy</a>
+<a class="font-body-md text-body-lg text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Help</a>
+<a class="font-body-md text-body-lg text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Shipping</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 Zahy. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zahy - DRESS LOUD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;700&amp;family=Climate+Crisis:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-error-container": "#ffdad6", "surface-container": "#1e2113", "on-primary-fixed": "#161e00", "surface-dim": "#111508", "on-surface": "#e2e4cf", primary: "#ffffff", "inverse-on-surface": "#2f3223", "primary-container": "#c3f400", "surface-tint": "#abd600", "inverse-surface": "#e2e4cf", "on-error": "#690005", "primary-fixed-dim": "#abd600", "on-secondary-fixed": "#380038", "surface-bright": "#373b2c", "on-tertiary": "#411d66", "on-surface-variant": "#c4c9ac", "secondary-fixed": "#ffd7f5", "on-primary-container": "#556d00", "tertiary-fixed-dim": "#dcb8ff", "inverse-primary": "#506600", "on-background": "#e2e4cf", "error-container": "#93000a", "on-primary": "#283500", "secondary-container": "#fe00fe", "surface-container-low": "#1a1d10", "on-secondary": "#5b005b", secondary: "#ffabf3", "tertiary-fixed": "#efdbff", "primary-fixed": "#c3f400", outline: "#8e9379", "on-tertiary-fixed-variant": "#59367e", "on-primary-fixed-variant": "#3c4d00", "on-secondary-container": "#500050", "tertiary-container": "#efdbff", "on-tertiary-fixed": "#2b0150", background: "#111508", "on-tertiary-container": "#78549f", "on-secondary-fixed-variant": "#810081", tertiary: "#ffffff", "secondary-fixed-dim": "#ffabf3", error: "#ffb4ab", "outline-variant": "#444933", "surface-container-high": "#282b1d", "surface-container-lowest": "#0c0f04", "surface-variant": "#333627", "surface-container-highest": "#333627", surface: "#111508"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, spacing: {"stack-lg": "80px", unit: "8px", gutter: "24px", "margin-desktop": "64px", "stack-md": "32px", "margin-mobile": "20px", "container-max": "1440px", "stack-sm": "12px"}, fontFamily: {"display-xl": ["DynaPuff"], "body-md": ["Climate Crisis"], "headline-lg": ["DynaPuff"], "body-lg": ["Climate Crisis"], "label-bold": ["DynaPuff"], "headline-lg-mobile": ["DynaPuff"], "headline-md": ["DynaPuff"]}, fontSize: {"display-xl": ["120px", {lineHeight: "110%", letterSpacing: "-0.04em", fontWeight: "700"}], "body-md": ["16px", {lineHeight: "150%", fontWeight: "400"}], "headline-lg": ["72px", {lineHeight: "100%", letterSpacing: "-0.02em", fontWeight: "700"}], "body-lg": ["20px", {lineHeight: "150%", fontWeight: "400"}], "label-bold": ["14px", {lineHeight: "120%", fontWeight: "700"}], "headline-lg-mobile": ["48px", {lineHeight: "100%", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-md": ["40px", {lineHeight: "110%", fontWeight: "600"}]}}}};</script>
+<style>
+        .glass-panel {
+            background: rgba(30, 33, 19, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 2px solid rgba(195, 244, 0, 0.4);
+        }
+        .hero-text-shadow {
+            text-shadow: 6px 6px 0px rgba(254, 0, 254, 0.8), -4px -4px 0px rgba(195, 244, 0, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container/80 backdrop-blur-xl shadow-lg shadow-primary-container/10">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-gutter">
+<a class="font-headline-md text-headline-md font-extrabold tracking-tighter text-primary-fixed" href="#">Zahy</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-gutter ml-stack-md">
+<a class="font-label-bold text-label-bold text-primary-fixed" href="#">Home</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">Shop All</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">Collections</a>
+<a class="font-label-bold text-label-bold text-secondary hover:text-secondary-fixed transition-colors" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex items-center gap-unit">
+<button aria-label="Search" class="p-2 text-on-surface hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button aria-label="Favorites" class="p-2 text-on-surface hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button aria-label="Bag" class="p-2 text-on-surface hover:text-primary-fixed transition-colors relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-secondary-container rounded-full"></span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-24 md:pt-32">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto mb-stack-lg">
+<div class="relative w-full h-[614px] md:h-[716px] rounded-xl overflow-hidden flex items-center justify-center bg-gradient-to-br from-secondary-container via-surface-container to-primary-container p-1">
+<div class="relative w-full h-full rounded-xl overflow-hidden flex items-center justify-center">
+<img alt="Men wearing colorful street fashion" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-80" data-alt="A high-energy fashion editorial shot of young men wearing vibrant, saturated streetwear. They are posed dynamically in an airy, brightly lit modern studio. The clothing features bold color blocks of electric blue and bright orange against crisp white. The lighting is high-key and fresh, evoking a sense of extroverted, youthful momentum perfectly suited for a modern, glassmorphic UI layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQv8_3XEYULxTnR-IT-SaKj9necRqbW2E0tZBYL8tD1kNBnpx6PZDc8bNVOxGAXDNAtNYNSzqsTHtduVvxLPFwYr9bDH83lzIIyYhWxU-DQNFnXcsnN6skM33Xex3qlix5FXjBUMVPRJ_x_BoSVNXCNj9br3ocxL2zg1yaYtuByvq8U4s2K04FlATKNjVP1cy1sPqkYmbGLEPredqXv6O6UscfiLI5eIB9d3Lln9NYzYCi7zbkIvHeoV5df1GtWbZsfC9oLlSxVQ"/>
+<div class="relative z-10 text-center px-4 max-w-4xl glass-panel p-stack-md rounded-xl shadow-2xl shadow-primary-container/30">
+<h1 class="font-display-xl text-[80px] md:text-display-xl font-extrabold text-primary-fixed tracking-tighter mb-stack-sm hero-text-shadow leading-none">DRESS LOUD</h1>
+<p class="font-body-lg text-body-lg text-on-surface mb-stack-md max-w-2xl mx-auto font-bold">Vibrant fits for extroverted energy. The new collection drops now.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold px-8 py-4 rounded-full shadow-lg shadow-primary-fixed/30 hover:scale-105 transition-transform duration-200 active:scale-95 border-2 border-primary-fixed">Shop the Drop</button>
+<button class="bg-surface-container text-primary-fixed font-label-bold text-label-bold px-8 py-4 rounded-full border-2 border-primary-fixed hover:bg-surface-container-high transition-colors duration-200">View Lookbook</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- New Drops Grid -->
+<section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto mb-stack-lg">
+<div class="flex justify-between items-end mb-stack-md">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">New Drops</h2>
+<a class="font-label-bold text-label-bold text-primary-fixed flex items-center gap-1 hover:underline" href="#">
+                    View All <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container rounded-lg p-4 shadow-lg shadow-primary-fixed/5 hover:shadow-2xl hover:shadow-primary-fixed/20 transition-all duration-300 border border-outline-variant">
+<div class="relative aspect-[4/5] rounded-DEFAULT overflow-hidden bg-surface-bright mb-4">
+<img alt="Electric Blue Hoodie" class="w-full h-full object-cover mix-blend-lighten group-hover:scale-105 transition-transform duration-500" data-alt="A trendy, oversized electric blue hoodie displayed against a very light purple tinted background. The lighting is soft and studio-quality, emphasizing the fabric's texture and the garment's bold, saturated color. The aesthetic perfectly matches a bright, high-contrast, modern e-commerce visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX93igTFkieGVAr5n9L796CGLpPKh_T2xLN9IiXWGMK1oNPbu5t4EGlVoouTIhmT8W_LWoPZAoFIU5dFWXpQWOQRDpzkLngby5UdnSHtzf_Maz40SKc2ESngMVVCv6pTQ7lw6WWpvrE-uBjbS-YTAxbjpQ1LCXVICB7NC6pAB4AnljSpQLMT9DeWByL43eXkMB3oSPKKPqU6pLpNFhxcgIUWaVXqhqMfZFN0dqtqNSP8soVXDilFvFi4Ugj8e9hFxci_i6fGjBHA"/>
+<div class="absolute top-2 left-2 flex gap-2">
+<span class="bg-secondary-container text-on-primary font-label-bold text-label-bold px-3 py-1 rounded-full">New</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 bg-surface/80 backdrop-blur-sm rounded-full text-on-surface hover:text-secondary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label-bold text-label-bold text-on-background mb-1">Cobalt Core Hoodie</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">$85</p>
+</div>
+<button aria-label="Add to cart" class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-md shadow-primary-fixed/30">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container rounded-lg p-4 shadow-lg shadow-primary-fixed/5 hover:shadow-2xl hover:shadow-primary-fixed/20 transition-all duration-300 border border-outline-variant">
+<div class="relative aspect-[4/5] rounded-DEFAULT overflow-hidden bg-surface-bright mb-4">
+<img alt="Patterned Shirt" class="w-full h-full object-cover mix-blend-lighten group-hover:scale-105 transition-transform duration-500" data-alt="A vibrant, short-sleeve men's shirt featuring a bold, high-contrast geometric pattern in bright orange and deep blue, floating against a very light tinted background. The studio lighting highlights the crispness of the colors, fitting perfectly into a playful, energetic modern retail design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAaUflfwE-UFbdgvdFk8oAMVJuWDT7Wm4UVav3vyd3ZYv9TRKTARzcw2dfEjT41ewdnxQ8N-Anxd5eDdsPMsMOiyVOBFouTmLXtifoolgQ0uyJb7kf5gbjv7clhkagxX90vRumR-JkQmvor_rk_NkA1jne-uMPHwDJ9JGDBGlf0sh8qxrZesM602gKmLxoFJCYknurzHN_mT4t0zzbLso1fBsnc8zYxYjcsYMQGjDbU1vWELjHVf8jfGnjlOxLnbGCOdRYVrad3A"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label-bold text-label-bold text-on-background mb-1">Geo Pulse Shirt</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">$65</p>
+</div>
+<button aria-label="Add to cart" class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-md shadow-primary-fixed/30">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container rounded-lg p-4 shadow-lg shadow-primary-fixed/5 hover:shadow-2xl hover:shadow-primary-fixed/20 transition-all duration-300 border border-outline-variant">
+<div class="relative aspect-[4/5] rounded-DEFAULT overflow-hidden bg-surface-bright mb-4">
+<img alt="Wide Leg Trousers" class="w-full h-full object-cover mix-blend-lighten group-hover:scale-105 transition-transform duration-500" data-alt="Modern men's wide-leg trousers in a saturated ink blue color, displayed against a light, airy background. The lighting highlights the drape and relaxed fit of the fabric. The image communicates a trendy, fashion-forward extroverted style suitable for a high-energy e-commerce platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsrVBw-DQ2Khp6_5GR_hoA5pjhBbAvPhu2IIVXvTSXXb4U3FHNQ_hLhbmJVqnwxuCFauxEZ8VhdP-CZpkc1wvhp3hkHSj-1QbbapAVd4pAPCCOmwRVdZdoso8nN4_FtoK1Xvs4diOsurIgwrA07Z2GmBx9QqlrNd8077BzJ5zaH7I5IRMTXSZX_uPNz6RoNzdpVypBgiZ9rWBn2jFhfNwVCKS1y_vpS3smRz2LGAJ1gY_GhUqjKrSiQT3FCFXKjCbmBLNTF07bPA"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label-bold text-label-bold text-on-background mb-1">Fluid Cargo Pants</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">$95</p>
+</div>
+<button aria-label="Add to cart" class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-md shadow-primary-fixed/30">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-surface-container rounded-lg p-4 shadow-lg shadow-primary-fixed/5 hover:shadow-2xl hover:shadow-primary-fixed/20 transition-all duration-300 border border-outline-variant">
+<div class="relative aspect-[4/5] rounded-DEFAULT overflow-hidden bg-surface-bright mb-4">
+<img alt="Bright Orange Beanie" class="w-full h-full object-cover mix-blend-lighten group-hover:scale-105 transition-transform duration-500" data-alt="A chunky knit men's beanie in an intensely bright orange color, floating against a soft, light purple tinted background. The studio lighting is crisp, making the texture of the knit stand out boldly. The overall look is energetic, vibrant, and aligned with a high-contrast fashion brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFOrnw-06EGjrqU_E68oCuC6tSJKmGRfV9mDSJR-P-xzVv4D3K2PLrIq-mJVNfDfAkmBMNjzIslsXBj9EzeeOjIsgN6wDumkedvZJfwId0O03-aPRqFkiBMzwyudq1doDFfXWvTF5my6lkfB4iDBZb_M4ITY5IW3Ia7D2DH-pt3jWK3AG1ki5PaGtiTPpH--ZjLTPHblbaiWQ7BuKvtUywuTlYQu4MipHBOLNh3GbzaIngKscWSjBboAIHBEEDc5pWpae2x3FgcQ"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label-bold text-label-bold text-on-background mb-1">Neon Rib Beanie</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">$35</p>
+</div>
+<button aria-label="Add to cart" class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-md shadow-primary-fixed/30">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Bento Grid -->
+<section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto mb-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter h-auto md:h-[500px]">
+<div class="md:col-span-2 relative rounded-lg overflow-hidden group cursor-pointer shadow-lg shadow-primary-fixed/5 min-h-[300px] border-2 border-outline-variant hover:border-primary-fixed transition-colors">
+<img alt="Streetwear Outerwear" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="A dynamic shot of layered men's outerwear, featuring bright, contrasting technical fabrics. The scene is brightly lit, emphasizing the saturated colors and voluminous shapes of the clothing. The aesthetic is modern, extroverted streetwear against a clean, light-mode architectural backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxIdf-9s1ZWfrWtjqCOPEX38aMeM_ncS5klcqCD_cl3ImS45VNohl-tUZ1oXFj6i5dlFrcjN7xsXRNkr4Q5eH9O_EvMP1a8D2OuunsiVt1N32bFIAgYZcVUBkBc_vKP2RrvFjlY-Spo6TtQJHbVPiJbI4uvlayv8Gj9EC_YW9OvTRW83wQrmVJfmh4l9vMei0rak8gK_fay1FV13Sn9IJacxRjksFgdkbABh7g1NXL2AFm9DGslMyhBITpx0vOEXXfMwjRpqo3Hw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-stack-md w-full">
+<h3 class="font-headline-lg text-headline-md md:text-headline-lg text-primary-fixed mb-2">Outerwear</h3>
+<p class="font-body-md text-body-md text-on-surface mb-4 max-w-md">Jackets that make an entrance. Bold colors, technical cuts.</p>
+<span class="inline-flex items-center gap-2 font-label-bold text-label-bold text-on-primary-fixed bg-primary-fixed px-6 py-3 rounded-full hover:scale-105 transition-transform">
+                            Shop Outerwear <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</span>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden group cursor-pointer shadow-lg shadow-primary-fixed/5 min-h-[300px] border-2 border-outline-variant hover:border-secondary-container transition-colors">
+<div class="absolute inset-0 bg-secondary-container mix-blend-multiply opacity-40 group-hover:opacity-20 transition-opacity z-10"></div>
+<img alt="Sneakers" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A pair of chunky, vibrant streetwear sneakers with electric blue and orange accents, sitting on a glossy, minimalist surface. The lighting is bright and high-contrast, casting soft blue-tinted shadows. The image perfectly captures a playful, gamified approach to modern men's fashion footwear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9hKPKOOc_95W2W36LaD2Hq0Kli1RaDDRbsn9njlW1KzeG5NC5px0IqvlloSO5A_6uz9ggAVV5klzvIvENpjMKZElN_oiq2ZXzgUZ6c6_SkM39cpu_utgzmJ5jAFDiEpvnqs0Rie91qB0tb2Big3vke-qJGPYOmaWj6wRqAaew937rO8ipNkD-NQQSXraOJz-EuObvixnMeiYGCXMf9y3iUzqGy_evoJYpEDGBA0R3sBUG4Dn-Fdg5aYOChYUXjPgthBi6eWSxhA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-10"></div>
+<div class="absolute bottom-0 left-0 p-stack-md w-full z-20">
+<h3 class="font-headline-md text-headline-md text-secondary-container mb-2">Footwear</h3>
+<span class="inline-flex items-center gap-2 font-label-bold text-label-bold text-on-primary-fixed bg-secondary-container px-6 py-3 rounded-full hover:scale-105 transition-transform">
+                            Explore <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container-high/90 backdrop-blur-xl shadow-[0_-4px_20px_0_rgba(195,244,0,0.1)] pb-safe border-t border-primary-fixed/20">
+<div class="flex justify-around items-center p-2 w-full">
+<!-- Active: Home -->
+<button class="flex flex-col items-center justify-center bg-primary-fixed text-on-primary-fixed rounded-full px-4 py-2 active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-bold text-label-bold mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface hover:text-primary-fixed transition-colors p-2 rounded-xl active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="reorder">reorder</span>
+<span class="font-label-bold text-label-bold mt-1">Shop</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface hover:text-primary-fixed transition-colors p-2 rounded-xl active:scale-90 duration-150 relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-secondary-container rounded-full"></span>
+<span class="font-label-bold text-label-bold mt-1">Bag</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface hover:text-primary-fixed transition-colors p-2 rounded-xl active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-bold text-label-bold mt-1">Profile</span>
+</button>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="w-full mt-stack-lg bg-surface-container border-t border-outline-variant pb-24 md:pb-8">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-lg w-full max-w-container-max mx-auto gap-stack-md">
+<div class="font-headline-lg text-headline-md text-primary-fixed">Zahy</div>
+<nav class="flex flex-wrap justify-center gap-x-stack-lg gap-y-unit">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-colors cursor-pointer" href="#">Terms</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-colors cursor-pointer" href="#">Privacy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-colors cursor-pointer" href="#">Help</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-colors cursor-pointer" href="#">Shipping</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant text-center md:text-right">
+                © 2024 Zahy. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
